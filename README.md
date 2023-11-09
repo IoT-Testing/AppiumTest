@@ -1,8 +1,3 @@
-// AppiumTest
-//Script
-
-
-
 package AtombergTest;
 
 import io.appium.java_client.AppiumDriver;
@@ -26,14 +21,14 @@ public class Atomberg {
 
     public static void openAtomberg() {
         DesiredCapabilities cap = new DesiredCapabilities();
-        cap.setCapability("deviceName", "model");
-        cap.setCapability("udid", "ADB value");
+        cap.setCapability("deviceName", "SM-M127G/DS");
+        cap.setCapability("udid", "RZ8T60V88JT");
         cap.setCapability("platformName", "Android");
-        cap.setCapability("platformVersion", "version");
-        cap.setCapability("appPackage", "com.package.app");
-        cap.setCapability("appActivity", "com.package.app.MainActivity");
+        cap.setCapability("platformVersion", "13");
+        cap.setCapability("appPackage", "com.atomberg.app");
+        cap.setCapability("appActivity", "com.atomberg.app.MainActivity");
         cap.setCapability("autoGrantPermissions", true);
-        cap.setCapability("apksigner", "file\\apksigner.jar");
+        cap.setCapability("apksigner", "C:\\Users\\Rohit\\Desktop\\android-sdk\\build-tools\\34.0.0\\lib\\apksigner.jar");
 
 
         URL url;
