@@ -34,7 +34,7 @@ public class Atomberg {
 
         URL url;
         try {
-            url = new URL("http://192.168.11.233:4723/wd/hub");
+            url = new URL("http://url:4723/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
             return;
