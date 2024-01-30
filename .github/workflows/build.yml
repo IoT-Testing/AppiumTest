@@ -21,6 +21,15 @@ jobs:
       - name: Cache SonarCloud packages
         uses: actions/cache@v3
         with:
+        java-version: 17
+    distribution: 'jdk'
+    check-latest: false
+    server-id: github
+    server-username: GITHUB_ACTOR
+    server-password: GITHUB_TOKEN
+    overwrite-settings: true
+    job-status: success
+    token: ${{ secrets.GITHUB_TOKEN }}
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
