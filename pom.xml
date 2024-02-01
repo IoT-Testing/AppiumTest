@@ -9,11 +9,6 @@
   <properties>
     <sonar.organization>iot-testing</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    <plugin>
-      <groupId>org.codehaus.mojo</groupId>
-      <artifactId>sonar-maven-plugin</artifactId>
-      <version>3.0.2</version>
-    </plugin>
   </properties>
   <description>New Appium Project</description>
   <dependencies>
@@ -45,5 +40,15 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.codehaus.sonar</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>2.5</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>
