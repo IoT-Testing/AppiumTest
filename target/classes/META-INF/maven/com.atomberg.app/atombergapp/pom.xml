@@ -8,7 +8,6 @@
   <version>0.0.1-SNAPSHOT</version>
   <description>New Appium Project</description>
   <url>http://maven.apache.org</url>
-  
   <properties>
     <maven.compiler.source>6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
@@ -19,7 +18,6 @@
       <artifactId>java-client</artifactId>
       <version>9.0.0</version>
     </dependency>
-
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
@@ -39,7 +37,7 @@
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>7.4.0</version> <!-- Use the latest version available -->
+      <version>7.5.1</version> <!-- Use the latest version available -->
       <scope>test</scope>
     </dependency>
   </dependencies>
