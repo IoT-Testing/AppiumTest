@@ -34,6 +34,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ATOM_BERG }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=IoT-Testing_AppiumTest
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=IoT-Testing_AppiumTest -Dsonar.host.url=http://localhost:9000
       
       
