@@ -18,9 +18,12 @@ jobs:
         with:
           java-version: 17
           distribution: 'zulu' # Alternative distribution options are available.
-
-          java-version: 17.0.5
-          distribution: 'oracle' # Alternative distribution options are available.
+steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'microsoft'
+          java-version: '17'
 
       - name: Cache SonarCloud packages
         uses: actions/cache@v3
