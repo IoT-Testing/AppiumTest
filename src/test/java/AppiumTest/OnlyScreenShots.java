@@ -37,8 +37,6 @@ public class OnlyScreenShots {
     {
     	  DesiredCapabilities cap = new DesiredCapabilities();
     	  cap.setCapability("automationName", "UiAutomator2");
-          cap.setCapability("deviceName", "POCO M6 Pro 5G");
-          cap.setCapability("udid", "e5b51506054a");
           cap.setCapability("platformName", "Android");
           cap.setCapability("platformVersion", "13");
           cap.setCapability("apksigner","C:\\Users\\Rohit\\Desktop\\android-sdk\\build-tools\\34.0.0\\lib\\apksigner.jar");
