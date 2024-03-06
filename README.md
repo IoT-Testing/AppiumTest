@@ -26,15 +26,15 @@ public class Atomberg {
         cap.setCapability("udid", "RZ8T60V88JT");
         cap.setCapability("platformName", "Android");
         cap.setCapability("platformVersion", "13");
-        cap.setCapability("appPackage", "com.atomberg.app");
-        cap.setCapability("appActivity", "com.atomberg.app.MainActivity");
+        cap.setCapability("appPackage", "com.package.app");
+        cap.setCapability("appActivity", "com.package.app.Activity");
         cap.setCapability("autoGrantPermissions", true);
         cap.setCapability("apksigner", "C:\\Users\\Rohit\\Desktop\\android-sdk\\build-tools\\34.0.0\\lib\\apksigner.jar");
 
 
         URL url;
         try {
-            url = new URL("http://192.168.11.233:4723/wd/hub");
+            url = new URL("http://url:4723/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
             return;

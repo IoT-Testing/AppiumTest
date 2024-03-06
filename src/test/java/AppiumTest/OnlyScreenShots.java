@@ -1,12 +1,20 @@
-package AtombergTest; 
+package AppiumTest; 
 //Add First Device
 
 
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.awaitility.Awaitility;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities; //Selenium Dependencies for Mobile capabilities
 import org.testng.Assert;
@@ -43,25 +51,35 @@ public class OnlyScreenShots {
         } catch (MalformedURLException e) {
             System.out.println("Error initializing Appium driver: " + e.getMessage());
             Assert.fail("Expected element to click not found");
-            Method.captureScreenshot(driver);
+            captureScreenshot(driver);
             e.printStackTrace();
             return;
         }
-         Method.captureScreenshot(driver);
+         captureScreenshot(driver);
          List<WebElement> el = driver.findElements(By.xpath("//android.widget.ImageView"));
          System.out.println("List Size: " + el.size()+"\n");
          
          for (WebElement element : el) {
-        	    System.out.println("Element text: " + element.getDomAttribute("bounds")+"\n");
+        	    System.out.println("Element text: " + element.getDomAttribute("text")+"\n");
         	}
          sleep(500);
          
          }
 
-    private static void sleep(long millis) {
+    private static void sleep(long millis)
+    {
+    	    Awaitility.await().atMost(millis, TimeUnit.MILLISECONDS);
+    }
+    public static void captureScreenshot(AppiumDriver driver) {
         try {
-            Thread.sleep(millis);
-        } catch (InterruptedException e) {
+            File screenshotFile = driver.getScreenshotAs(OutputType.FILE);
+            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            String destinationFilePath = "C:\\Users\\Rohit\\Desktop\\Rohit\\Appium Screenshots\\NEWMOBILES\\Trail1\\Screenshot_" + timestamp + ".png";
+
+            FileUtils.copyFile(screenshotFile, new File(destinationFilePath));
+
+            System.out.println("Appium screenshot saved to: " + destinationFilePath);
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
