@@ -1,9 +1,15 @@
+<<<<<<< Updated upstream
 package AppiumTest; 
 //Add First Device
 
 
 import java.io.File;
 import java.io.IOException;
+=======
+package AppiumTest;
+//Add First Device
+
+>>>>>>> Stashed changes
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
@@ -33,8 +39,10 @@ public class OnlyScreenShots {
             exp.printStackTrace();
         }
     }
+
     public static void openAtomberg() // Main
     {
+<<<<<<< Updated upstream
     	  DesiredCapabilities cap = new DesiredCapabilities();
     	  cap.setCapability("automationName", "UiAutomator2");
           cap.setCapability("platformName", "Android");
@@ -42,6 +50,18 @@ public class OnlyScreenShots {
           cap.setCapability("apksigner","C:\\Users\\Rohit\\Desktop\\android-sdk\\build-tools\\34.0.0\\lib\\apksigner.jar");
           cap.setCapability("dumpAppPackageInfo", true);
          try {
+=======
+        DesiredCapabilities cap = new DesiredCapabilities();
+        cap.setCapability("automationName", "UiAutomator2");
+        cap.setCapability("deviceName", "POCO M6 Pro 5G");
+        cap.setCapability("udid", "e5b51506054a");
+        cap.setCapability("platformName", "Android");
+        cap.setCapability("platformVersion", "13");
+        cap.setCapability("apksigner",
+                "C:\\Users\\Rohit\\Desktop\\android-sdk\\build-tools\\34.0.0\\lib\\apksigner.jar");
+        cap.setCapability("dumpAppPackageInfo", true);
+        try {
+>>>>>>> Stashed changes
             System.out.println("Initializing Appium driver..."); // Check if the Appium driver is initialized
             URL url = new URL("http://192.168.8.255:4723/wd/hub"); // URL of the Appium session
             driver = new AppiumDriver(url, cap);
@@ -53,6 +73,7 @@ public class OnlyScreenShots {
             e.printStackTrace();
             return;
         }
+<<<<<<< Updated upstream
          captureScreenshot(driver);
          List<WebElement> el = driver.findElements(By.xpath("//android.widget.ImageView"));
          System.out.println("List Size: " + el.size()+"\n");
@@ -63,6 +84,18 @@ public class OnlyScreenShots {
          sleep(500);
          
          }
+=======
+        Method.captureScreenshot(driver);
+        List<WebElement> el = driver.findElements(By.xpath("//android.widget.ImageView"));
+        System.out.println("List Size: " + el.size() + "\n");
+
+        for (WebElement element : el) {
+            System.out.println("Element text: " + element.getDomAttribute("bounds") + "\n");
+        }
+        sleep(500);
+
+    }
+>>>>>>> Stashed changes
 
     private static void sleep(long millis)
     {
