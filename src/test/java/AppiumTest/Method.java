@@ -374,7 +374,6 @@ public class Method
 	    	System.out.println("Taking More time...");
 	    	sleep(30000);
 	    } 
-	    	    Skip.click();
 	    Method.captureScreenshot(driver);
 	    sleep(1000);
 	}
