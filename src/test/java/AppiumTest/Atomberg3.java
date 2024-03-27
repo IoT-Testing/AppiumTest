@@ -1,4 +1,4 @@
-package AtombergTest; //To check 
+package AppiumTest; //To check 
 
 
 import io.appium.java_client.AppiumDriver;
@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 import org.awaitility.Awaitility;
 
 public class Atomberg3 {
-   static AppiumDriver driver;
+   public static AppiumDriver driver;
 
    public static void main(String[] args) {
       try {
