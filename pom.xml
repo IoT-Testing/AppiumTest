@@ -12,6 +12,10 @@
     <maven.compiler.source>7</maven.compiler.source>
     <maven.compiler.target>7</maven.compiler.target>
   </properties>
+  <properties>
+    <sonar.organization>apptesting</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>io.appium</groupId>
@@ -41,10 +45,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <properties>
-    <sonar.organization>apptesting</sonar.organization>
-    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-  </properties>
+
   <build>
     <pluginManagement>
       <plugins>
