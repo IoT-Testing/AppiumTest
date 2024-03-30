@@ -1,14 +1,6 @@
-package AppiumTest; 
-//Add First Device
-
-
-import java.io.File;
-import java.io.IOException;
-=======
 package AppiumTest;
 //Add First Device
 
->>>>>>> Stashed changes
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
